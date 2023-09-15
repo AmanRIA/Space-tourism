@@ -1,6 +1,14 @@
 document.getElementById('Launch vehicle').addEventListener('click', loadTechData);
 document.getElementById('Spaceport').addEventListener('click', loadTechData);
 document.getElementById('Space capsule').addEventListener('click', loadTechData);
+const destinationNavItem = document.querySelector('#tech-nav-item');
+const itemList=document.querySelectorAll('.dots');
+if (document.body.classList.contains('bodyTech')) {
+  destinationNavItem.classList.add('active');
+} else {
+  destinationNavItem.classList.remove('active');
+}
+
 
 function loadTechData(event) {
     
@@ -8,7 +16,15 @@ function loadTechData(event) {
 
     
     const techId = event.target.id;
-    console.log(techId);
+    // console.log(techId);
+    itemList.forEach(item=>{
+      if(item.getAttribute('id')===techId){
+        item.classList.add('selected-dot');
+      }else{
+        item.classList.remove('selected-dot');
+      }
+    })
+
 
     fetch('./data.json')
         .then(response => response.json())

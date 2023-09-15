@@ -102,6 +102,10 @@
     border-bottom: 0.4rem solid rgba(255, 255, 255);
     
   }
+  .active{
+    border-bottom: 0.4rem solid rgba(255, 255, 255);
+    
+  }
   .main-nav-link{
     letter-spacing: 0.27rem;
 
@@ -218,7 +222,7 @@
     cursor: pointer;
     font-size: 3.2rem;
     text-align: center;
-    margin-top: 3rem;
+    
     font-family: Barlow Condensed, sans-serif;
   }
 
